@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Customfield date plugin
+ * Version details.
  *
  * @package   customfield_timerange
  * @copyright 2026 Université Rennes 2
@@ -25,5 +25,9 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'customfield_timerange';
-$plugin->version   = 2021051700;
-$plugin->requires  = 2021051100;
+
+// The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2026092300;
+
+// Requires Moodle 5.2.0.
+$plugin->requires  = 2026042000;
