@@ -295,15 +295,17 @@ class data_controller extends \core_customfield\data_controller {
             return 0;
         }
 
-        if (empty($value1) === true || isset($value1['start_hour'], $value1['start_minute']) === false) {
+        if (empty($value1) === true || isset($value1['start']['hour'], $value1['start']['minute']) === false) {
             return -1;
         }
 
-        if (empty($value2) === true || isset($value2['start_hour'], $value2['start_minute']) === false) {
+        if (empty($value2) === true || isset($value2['start']['hour'], $value2['start']['minute']) === false) {
             return 1;
         }
 
-        return strcoll($value1['start_hour'] . $value1['start_minute'], $value2['start_hour'] . $value2['start_minute']);
+        return strcoll(
+            $value1['start']['hour'] . $value1['start']['minute'],
+            $value2['start']['hour'] . $value2['start']['minute']
+        );
     }
-
 }
